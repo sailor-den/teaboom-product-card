@@ -1,0 +1,12 @@
+{
+  "name": "teaboom-product-card",
+  "private": true,
+  "description": "Верхняя часть карточки товара Teaboom.ru — Ананасовый улун",
+  "scripts": {
+    "build:css": "sass scss/main.scss css/main.css --style=expanded --no-source-map",
+    "watch:css": "sass --watch scss/main.scss:css/main.css --style=expanded --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.79.4"
+  }
+}

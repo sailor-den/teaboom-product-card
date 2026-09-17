@@ -1,0 +1,10 @@
+node_modules/
+.firecrawl/
+preview/
+teaboom-page.html
+teaboom.css
+teaboom-main.css
+splash.css
+.DS_Store
+Thumbs.db
+*.log

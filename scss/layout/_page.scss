@@ -1,0 +1,112 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.container {
+  width: calc(100% - 32px);
+  max-width: $container;
+  margin-inline: auto;
+
+  @include tablet {
+    width: calc(100% - 48px);
+  }
+}
+
+.header {
+  background: $color-paper;
+  border-bottom: 1px solid $color-line;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+  padding-block: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: $color-ink;
+}
+
+.logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.logo__text {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+
+.logo__name {
+  font-family: $font-display;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.logo__tagline {
+  font-size: 12px;
+  color: $color-muted;
+  line-height: 1.2;
+}
+
+.page {
+  padding-block: 20px 48px;
+
+  @include desktop {
+    padding-block: 28px 80px;
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 20px;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  @include desktop {
+    margin-bottom: 28px;
+  }
+}
+
+.breadcrumb ol {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  font-size: 13px;
+  color: $color-muted;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: "/";
+  margin-left: 8px;
+  color: #cfcfcf;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: $color-ink;
+}
+
+.breadcrumb [aria-current="page"] {
+  color: $color-text;
+}
